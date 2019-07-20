@@ -1,4 +1,4 @@
-def ceasar():
+def caesar():
     alpha=input("Please enter a word or sentence to decrypt: ")
     n=4 #A default letter shift of 4
     bet='abcdefghijklmnopqrstuvwxyz'
@@ -26,9 +26,9 @@ def ceasar():
     print(s)
     ans=input("Do you want to try this again? y or n")
     if ans.lower().startswith('y'):
-        ceasar()
+        caesar()
     else:
-        print("Thank you for using the ceasar encryption algorithm")
+        print("Thank you for using the Caesar encryption algorithm")
 
-ceasar()
+caesar()
 
