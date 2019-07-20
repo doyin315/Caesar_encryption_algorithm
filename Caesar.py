@@ -1,6 +1,6 @@
 def ceasar():
     alpha=input("Please enter a word or sentence to decrypt: ")
-    n=4
+    n=4 #A default letter shift of 4
     bet='abcdefghijklmnopqrstuvwxyz'
     s=""
     if len(alpha)<1:
@@ -13,12 +13,12 @@ def ceasar():
         else:
             if alpha[i] == " ":
                 s+=" "
-            elif (n+bet.index(alpha[i].lower()))<26:
+            elif (n+bet.index(alpha[i].lower()))<26: #if index is within range of the string bet "
                 if alpha[i].islower():
                     s+=bet[bet.index(alpha[i])+n].lower()
                 else:
                     s+=bet[bet.index(alpha[i].lower())+n].upper()
-            else:
+            else:      #if index is outside the range of the string bet "
                 if alpha[i].islower():
                     s+=bet[bet.index(alpha[i])+n-26].lower()
                 else:
