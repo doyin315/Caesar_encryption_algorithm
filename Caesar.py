@@ -6,7 +6,7 @@ def ceasar():
     if len(alpha)<1:
         print("You did not enter anything")
     for i in range(len(alpha)):
-        if  alpha[i] not in bet and alpha[i] != " ":
+        if  alpha[i].lower() not in bet and alpha[i] != " ":
             print("Invalid input!!! Enter only words consisting of only letters")
             s=""
             break
