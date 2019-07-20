@@ -28,7 +28,7 @@ def caesar():
     if ans.lower().startswith('y'):
         caesar()
     else:
-        print("Thanks for using the Caesar encryption algorithm")
+        print("Thanks for using the Caesar encryption algorithm.")
 
 caesar()
 
