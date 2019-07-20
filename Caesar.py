@@ -1,5 +1,5 @@
 def caesar():
-    alpha=input("Please enter a word or sentence to decrypt: ")
+    alpha=input("Please enter a word or sentence to encrypt: ")
     n=4 #A default letter shift of 4
     bet='abcdefghijklmnopqrstuvwxyz'
     s=""
