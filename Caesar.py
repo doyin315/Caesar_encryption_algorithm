@@ -24,7 +24,7 @@ def caesar():
                 else:
                     s+=bet[bet.index(alpha[i].lower())+n-26].upper()
     print(s)
-    ans=input("Do you want to try this again? y or n")
+    ans=input("Do you want to try this again? y or n: ")
     if ans.lower().startswith('y'):
         caesar()
     else:
