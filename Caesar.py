@@ -7,8 +7,8 @@ def caesar():
         print("You did not enter anything")
     for i in range(len(alpha)):
         if  alpha[i].lower() not in bet and alpha[i] != " ":
-            print("Invalid input!!! Enter only words consisting of only letters")
             s=""
+            s+="Invalid input!!! Enter words consisting of only letters"
             break
         else:
             if alpha[i] == " ":
