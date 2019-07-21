@@ -3,32 +3,32 @@ def caesar():
     n=4 #A default letter shift of 4
     bet='abcdefghijklmnopqrstuvwxyz'
     s=""
-    if len(alpha)<1:
+    if len(alpha)<1:        #accounting for if the user enters nothing at all
         print("You did not enter anything")
     for i in range(len(alpha)):
-        if  alpha[i].lower() not in bet and alpha[i] != " ":
+        if  alpha[i].lower() not in bet and alpha[i] != " ":     #accounting for if the user enters a number or special character
             s=""
             s+="Invalid input!!! Enter words consisting of only letters"
             break
         else:
-            if alpha[i] == " ":
+            if alpha[i] == " ":             #accounting for space entries
                 s+=" "
             elif (n+bet.index(alpha[i].lower()))<26: #if index is within range of the string bet "
                 if alpha[i].islower():
-                    s+=bet[bet.index(alpha[i])+n].lower()
+                    s+=bet[bet.index(alpha[i])+n]
                 else:
                     s+=bet[bet.index(alpha[i].lower())+n].upper()
             else:      #if index is outside the range of the string bet "
                 if alpha[i].islower():
-                    s+=bet[bet.index(alpha[i])+n-26].lower()
+                    s+=bet[bet.index(alpha[i])+n-26]
                 else:
                     s+=bet[bet.index(alpha[i].lower())+n-26].upper()
     print(s)
-    ans=input("Do you want to try this again? y or n: ")
+    ans=input("Do you want to try this again? y or n: ")        #prompting user to try again
     if ans.lower().startswith('y'):
-        caesar()
+        caesar()                                        #function calls itself if user wishes to try again
     else:
-        print("Thanks for using the Caesar encryption algorithm.")
+        print("Thanks for using the Caesar encryption.")
 
 caesar()
 
