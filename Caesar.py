@@ -11,22 +11,22 @@ def caesar():
             s+="Invalid input!!! Enter words consisting of only letters"
             break
         else:
-            if alpha[i] == " ":             #accounting for space entries
+            if alpha[i] == " ":      #accounting for space entries
                 s+=" "
-            elif (n+bet.index(alpha[i].lower()))<26: #if index is within range of the string bet "
+            elif (n+bet.index(alpha[i].lower()))<len(alpha):       #if index is within range of the string bet "
                 if alpha[i].islower():
                     s+=bet[bet.index(alpha[i])+n]
                 else:
                     s+=bet[bet.index(alpha[i].lower())+n].upper()
-            else:      #if index is outside the range of the string bet "
+            else:              #if index is outside the range of the string bet "
                 if alpha[i].islower():
-                    s+=bet[bet.index(alpha[i])+n-26]
+                    s+=bet[bet.index(alpha[i])+n-len(alpha)]
                 else:
-                    s+=bet[bet.index(alpha[i].lower())+n-26].upper()
+                    s+=bet[bet.index(alpha[i].lower())+n-len(alpha)].upper()
     print(s)
     ans=input("Do you want to try this again? y or n: ")        #prompting user to try again
     if ans.lower().startswith('y'):
-        caesar()                                        #function calls itself if user wishes to try again
+        caesar()             #function calls itself if user wishes to try again
     else:
         print("Thanks for using the Caesar encryption.")
 
